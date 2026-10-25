@@ -1,0 +1,35 @@
+{
+	"align_infill_direction_to_model": "1",
+	"combine_brims": "1",
+	"enable_support": "1",
+	"from": "Bundle",
+	"inherits": "0.30mm Standard @BBL A1 0.6 nozzle",
+	"name": "0.30mm Rocket @BBL A1 0.6 nozzle",
+	"outer_wall_line_width": "0.9",
+	"outer_wall_speed": "75",
+	"overhang_reverse": "1",
+	"overhang_reverse_internal_only": "1",
+	"overhang_reverse_threshold": "0%",
+	"print_extruder_id": [
+		"1"
+	],
+	"print_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"print_order": "as_obj_list",
+	"print_settings_id": "0.30mm Rocket @BBL A1 0.6 nozzle",
+	"relative_bridge_angle": "1",
+	"seam_position": "back",
+	"seam_slope_min_length": "20",
+	"seam_slope_start_height": "0",
+	"seam_slope_type": "all",
+	"slowdown_for_curled_perimeters": "1",
+	"small_area_infill_flow_compensation": "1",
+	"sparse_infill_pattern": "tpmsd",
+	"staggered_inner_seams": "1",
+	"support_on_build_plate_only": "1",
+	"support_style": "grid",
+	"support_type": "normal(auto)",
+	"version": "2.1.0.16",
+	"wall_generator": "arachne"
+}

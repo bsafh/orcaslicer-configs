@@ -1,0 +1,118 @@
+{
+    "close_fan_the_first_x_layers": [
+        "0"
+    ],
+    "default_filament_colour": [
+        "#F1E1B0"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "fan_max_speed": [
+        "70"
+    ],
+    "fan_min_speed": [
+        "35"
+    ],
+    "filament_cooling_final_speed": [
+        "0"
+    ],
+    "filament_cooling_initial_speed": [
+        "0"
+    ],
+    "filament_cooling_moves": [
+        "0"
+    ],
+    "filament_cost": [
+        "12"
+    ],
+    "filament_deretraction_speed": [
+        "40"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode\nCLEAR_ACTIVE_SPOOL\nRESTORE_GCODE_STATE NAME=PLA_START\n"
+    ],
+    "filament_flow_ratio": [
+        "0.9572"
+    ],
+    "filament_loading_speed": [
+        "0"
+    ],
+    "filament_loading_speed_start": [
+        "0"
+    ],
+    "filament_max_volumetric_speed": [
+        "25"
+    ],
+    "filament_ramming_parameters": [
+        "120 100| 0.05 6.6 0.45 6.8 0.95 7.8 1.45 8.3 1.95 9.7 2.45 10 2.95 7.6 3.45 7.6 3.95 7.6 4.45 7.6 4.95 7.6"
+    ],
+    "filament_retract_before_wipe": [
+        "70%"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.5"
+    ],
+    "filament_retraction_speed": [
+        "70"
+    ],
+    "filament_settings_id": [
+        "Geetech PLA bone white"
+    ],
+    "filament_shrink": [
+        "99.795%"
+    ],
+    "filament_shrinkage_compensation_z": [
+        "99.795%"
+    ],
+    "filament_start_gcode": [
+        "; Filament gcode\n; filament start gcode\nSET_ACTIVE_SPOOL ID=32\nSAVE_GCODE_STATE NAME=PLA_START\n;SET_GCODE_OFFSET Z=0.025 MOVE=1"
+    ],
+    "filament_unloading_speed": [
+        "0"
+    ],
+    "filament_unloading_speed_start": [
+        "0"
+    ],
+    "filament_vendor": [
+        "Geeetech"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "from": "User",
+    "full_fan_speed_layer": [
+        "1"
+    ],
+    "inherits": "Generic PLA Matte @System",
+    "is_custom_defined": "0",
+    "name": "Geetech PLA bone white",
+    "nozzle_temperature": [
+        "185"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "195"
+    ],
+    "nozzle_temperature_range_high": [
+        "215"
+    ],
+    "nozzle_temperature_range_low": [
+        "185"
+    ],
+    "pressure_advance": [
+        "0.056"
+    ],
+    "slow_down_layer_time": [
+        "20"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "version": "2.3.1.10"
+}

@@ -1,0 +1,18 @@
+{
+    "author": "de14fbf8-798b-433e-90b5-81fb6f9113cd",
+    "description": "## Requirements:\n\n- OrcaSlicer 2.4.0-beta or higher\n- Printer: Bambu Lab A1 mini\n- Nozzle: 0.2mm\n- Filament: eSUN PLA+ High Speed\n- Build Plate: Cool Plate (SuperTack)\n\n## Known issues and Information:\n\n- You may encounter errors when using the profile because certain settings are unavailable - just ignore them. It's because not all features were merged into the stable release of OrcaSlicer. The list of missing features can be found [here](https://github.com/OrcaSlicer/OrcaSlicer/issues?q=is%3Aopen%20is%3Apr%2011015%20AND%2013459%20AND%2012151).\n\n- Please set the `Retract amount before wipe` to 100%\n\n- Wall speeds were set to 72 mm/s because this is the minimum speed that gives me a good wall look. For you, it can be different. Please take some time to do the tests.\n\n- If you are using the regular eSUN PLA+, change the 72 mm/s speeds to 54-60 mm/s.\n\n- I still recommend that you use cooling towers\n\n- Resin2FDM supports can give you a lot of micro-stringing\n\n- You still can't send the prints directly from the slicer. You will need to export the sliced plate as a 3MF file and then send it to the printer via Bambu Connect.\n\n- Do not use the [Flow Dynamics Calibration](https://wiki.bambulab.com/en/software/bambu-studio/calibration_pa) feature\n\n- Photos of the minis, printed with this profile, can be found [there](https://www.instagram.com/layered.curiosities).",
+    "filament_presets": [
+        "eSUN PLA+ HS LC Orca v1.67 (0.02mm) @BBL A1M 0.2 nozzle"
+    ],
+    "id": "317007c6-420d-4efd-9cef-c0d87d3d44da",
+    "imported_time": 1782200494,
+    "name": "20 micron profile for miniatures (0.2mm nozzle, BBL A1 mini, eSUN PLA+ HS)",
+    "print_presets": [
+        "0.02mm LC Orca v1.67 (eSUN PLA+ HS) @BBL A1M 0.2 nozzle"
+    ],
+    "printer_presets": [
+        "LC Orca v1.6 Bambu Lab A1 mini 0.2 nozzle (0.02mm)"
+    ],
+    "updated_time": 0,
+    "version": "1.67"
+}

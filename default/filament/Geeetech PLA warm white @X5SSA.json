@@ -1,0 +1,34 @@
+{
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "fan_min_speed": [
+        "85"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_notes": [
+        "Geeetech PLA warm white: spröde, schwer zu drucken, unschöne Oberflächen, starke Delaminierung "
+    ],
+    "filament_settings_id": [
+        "Geeetech PLA warm white @X5SSA"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "65"
+    ],
+    "inherits": "Tronxy PLA Geeetech warm white (orca-pi-case_ersatz_x5sa.3mf)",
+    "is_custom_defined": "0",
+    "name": "Geeetech PLA warm white @X5SSA",
+    "nozzle_temperature": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "pressure_advance": [
+        "0.056"
+    ],
+    "version": "2.2.0.0"
+}

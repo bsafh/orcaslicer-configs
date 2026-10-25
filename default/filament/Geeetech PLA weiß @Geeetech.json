@@ -1,0 +1,49 @@
+{
+    "cool_plate_temp": [
+        "65"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "65"
+    ],
+    "eng_plate_temp": [
+        "65"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "65"
+    ],
+    "filament_cost": [
+        "11.5"
+    ],
+    "filament_flow_ratio": [
+        "1.05"
+    ],
+    "filament_settings_id": [
+        "Geeetech PLA weiß @Geeetech"
+    ],
+    "filament_vendor": [
+        "Geeetech"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "65"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
+    ],
+    "inherits": "Generic PLA @Geeetech",
+    "is_custom_defined": "0",
+    "name": "Geeetech PLA weiß @Geeetech",
+    "nozzle_temperature": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "215"
+    ],
+    "textured_plate_temp": [
+        "65"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
+    "version": "2.2.0.4"
+}

@@ -1,0 +1,66 @@
+{
+	"cool_plate_temp": [
+		"90"
+	],
+	"cool_plate_temp_initial_layer": [
+		"100"
+	],
+	"default_filament_colour": [
+		"#f9f507"
+	],
+	"eng_plate_temp": [
+		"90"
+	],
+	"eng_plate_temp_initial_layer": [
+		"100"
+	],
+	"filament_cost": [
+		"11"
+	],
+	"filament_deretraction_speed": [
+		"25"
+	],
+	"filament_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"filament_flow_ratio": [
+		"0.94"
+	],
+	"filament_retraction_length": [
+		"5"
+	],
+	"filament_retraction_speed": [
+		"25"
+	],
+	"filament_settings_id": [
+		"GEEETECH - PETG Yellow"
+	],
+	"filament_start_gcode": [
+		"ASSERT_ACTIVE_FILAMENT ID=39"
+	],
+	"filament_vendor": [
+		"GEEETECH"
+	],
+	"from": "User",
+	"hot_plate_temp": [
+		"90"
+	],
+	"hot_plate_temp_initial_layer": [
+		"100"
+	],
+	"inherits": "Generic PETG @System",
+	"name": "GEEETECH - PETG Yellow",
+	"nozzle_temperature": [
+		"240"
+	],
+	"nozzle_temperature_initial_layer": [
+		"250"
+	],
+	"textured_plate_temp": [
+		"90"
+	],
+	"textured_plate_temp_initial_layer": [
+		"100"
+	],
+	"version": "2.1.1.0"
+}

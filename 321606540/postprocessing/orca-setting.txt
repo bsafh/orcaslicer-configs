@@ -1,0 +1,3 @@
+/usr/bin/python3 ~/3D-print/Software/postprocessing/NonPlanarInterlockingWalls.py -include-infill -infill-amplitude 0.4  -infill-frequency 2 -include-perimeters -infill-direction xy -wall-direction xy -max-step-size 0.1 -wall-amplitude 0.2 -wall-frequency 2 -infill-function sine -perimeter-function sine -resolution 0.3;
+/usr/bin/python3 ~/3D-print/Software/postprocessing/Smoothificator_Adaptive.py -outerLayerHeight 0.14;
+

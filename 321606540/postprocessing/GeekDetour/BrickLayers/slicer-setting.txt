@@ -1,0 +1,1 @@
+/usr/bin/python3 /home/christian/3D-Print/Software/postprocessing/GeekDetour/BrickLayers/bricklayers.py -startAtLayer 3 -extrusionMultiplier 1.05 -enabled 1;

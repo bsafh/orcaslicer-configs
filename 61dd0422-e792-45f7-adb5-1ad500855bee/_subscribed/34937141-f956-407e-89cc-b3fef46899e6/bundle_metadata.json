@@ -1,0 +1,14 @@
+{
+    "author": "dc7b50aa-8e6e-4594-9007-b2d46b666143",
+    "description": "My profile for Kingroon PETG filament",
+    "filament_presets": [
+        "kingroon PETG BLANCO"
+    ],
+    "id": "34937141-f956-407e-89cc-b3fef46899e6",
+    "imported_time": 1782200494,
+    "name": "Kingroon PETG",
+    "print_presets": [],
+    "printer_presets": [],
+    "updated_time": 0,
+    "version": "1.00"
+}

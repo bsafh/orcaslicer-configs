@@ -1,0 +1,16 @@
+{
+    "author": "c23dfb34-a686-485d-a904-8c588c676a1b",
+    "description": "Filament&Process\nLong time tested speed PETG (SUNLU MATTE HIGH SPEED, ELEGOOO RAPID PETG)\nReal 250-300мм  Outer-Inner wall speed",
+    "filament_presets": [
+        "PETG ELEGOO RAPID"
+    ],
+    "id": "3bf25091-dc9a-4269-978d-dc983957e938",
+    "imported_time": 1782200494,
+    "name": "High Speed PETG",
+    "print_presets": [
+        "PETG RAPID 0.2"
+    ],
+    "printer_presets": [],
+    "updated_time": 0,
+    "version": "1.00"
+}

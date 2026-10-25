@@ -1,0 +1,119 @@
+{
+    "adaptive_bed_mesh_margin": "10",
+    "auxiliary_fan": "1",
+    "bed_custom_texture": "S:\\\\transfer\\\\3D-print\\\\Software\\\\OrcaSlicer-settings\\\\klipper_tronxy_logo.png",
+    "bed_exclude_area": [],
+    "bed_mesh_max": "290,290",
+    "bed_mesh_min": "40,20",
+    "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0",
+    "default_filament_profile": [
+        "Generic PLA @System"
+    ],
+    "extruder_clearance_height_to_lid": "220",
+    "extruder_clearance_height_to_rod": "38",
+    "extruder_clearance_radius": "76",
+    "from": "User",
+    "gcode_flavor": "klipper",
+    "inherits": "Tronxy X5SA 400 0.4 nozzle",
+    "is_custom_defined": "0",
+    "layer_change_gcode": ";------------------------------------\n;layer No [layer_num] > Print Height[layer_z] mm\n;LAYER:[layer_num]\n;------------------------------------\n;YUMI_PLR\nLOG_Z\n;@SNAPSHOT\n;M118  A1 action:SNAPSHOT \nM117 Layer {layer_num + 1}/[total_layer_count]\n",
+    "machine_end_gcode": "M117 Finishing print (ORCA print end gcode)\n; ORCA\nM400 ; wait for buffer to clear\nSET_SKEW CLEAR=1\n;PROBE_EDDY_NG_SET_TAP_OFFSET VALUE=0\nBED_MESH_CLEAR\n; CURA 5.8.0\nG91 ; Set Positioning to Relative\nM83 ; Set Extruder to Relative\nG92 E0 ; Reset Extruder\nG1 E-1.5 F3000 ; Retract 1.5mm of filament\nG1 Z0.2 ; Raise nozzle .2mm\nG90 ; Set positioning to absolute\nG1 X340 Y10 ; Park print head off bed\nG91 ; Set Positioning to Relative\nG1 Z5 ; Raise nozzle 5mm\nM106 S0 ; Turn off part fan\nM104 S0 ; Set nozzle temp to zero\nM140 S0 ; set bed temp to zero\nM117 remove parts from build plate!\nM117 AFTER removing parts, click RESUME\nPAUSE\n; after RESUME\nPARKMIDDLE ; middle of the bed, 3m above bed\nG0 Z4 ; park at 4mm above bed\nM84 X Y Z E ; Disable X Y Z and E steppers\n;YUMI_PLR\nSAVE_VARIABLE VARIABLE=was_interrupted VALUE=False\nM117 execute clear last file\nclear_last_file\nG31\nSFS_DISABLE\n;BEEP\n; start melody\nM300 S294 P220 ;N1 D4 1/8\nM300 S20000 P20\nM300 S311 P220 ;N2 D#4 1/8\nM300 S20000 P20\nM300 S330 P220 ;N3 E4 1/8\nM300 S20000 P20\nM300 S523 P460 ;N4 C5 1/4\nM300 S20000 P20\nM300 S330 P220 ;N5 E4 1/8\nM300 S20000 P20\nM300 S523 P230 ;N6 C5 1/8\nM300 S20000 P10\nM300 S330 P220 ;N7 E4 1/8\nM300 S20000 P20\nM300 S523 P230 ;N8 C5 1/8\nM300 S20000 P10\nM300 S523 P950 ;N9 C5 1/2\nM300 S20000 P10\nM300 S523 P220 ;N10 C5 1/8\nM300 S20000 P20\nM300 S523 P220 ;N11 C5 1/8\nM300 S20000 P20\nM300 S587 P220 ;N12 D5 1/8\nM300 S20000 P20\nM300 S622 P220 ;N13 D#5 1/8\nM300 S20000 P20\nM300 S659 P220 ;N14 E5 1/8\nM300 S20000 P20\nM300 S523 P220 ;N15 C5 1/8\nM300 S20000 P20\nM300 S587 P220 ;N16 D5 1/8\nM300 S20000 P20\nM300 S659 P230 ;N17 E5 1/8\nM300 S20000 P10\nM300 S659 P230 ;N11 E5 1/8\nM300 S20000 P10\nM300 S494 P220 ;N19 B4 1/8\nM300 S20000 P20\nM300 S587 P460 ;N20 D5 1/2\nM300 S20000 P20\nM300 S523 P1420; C5 1/2+1/4\nM300 S20000 P20\nM300 S20000 P1920; pausE ONE MEASURE\nBEEP I=3 DUR=200 FREQ=800\nM117 Printer has shut down\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\n; TIMELAPSE_RENDER \n; PRINT_END\nM117 end or Orca print end gcode\nM84 X Y Z E ; Disable X Y Z and E steppers\nM117 print completed\nEND_PRINT",
+    "machine_max_acceleration_e": [
+        "1000",
+        "1000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "3100",
+        "3100"
+    ],
+    "machine_max_acceleration_retracting": [
+        "3100",
+        "3100"
+    ],
+    "machine_max_acceleration_x": [
+        "3100",
+        "3100"
+    ],
+    "machine_max_acceleration_y": [
+        "4000",
+        "4000"
+    ],
+    "machine_max_acceleration_z": [
+        "2400",
+        "2400"
+    ],
+    "machine_max_jerk_e": [
+        "6.4",
+        "6.4"
+    ],
+    "machine_max_jerk_x": [
+        "6.4",
+        "6.4"
+    ],
+    "machine_max_jerk_y": [
+        "6.4",
+        "6.4"
+    ],
+    "machine_max_speed_e": [
+        "500",
+        "500"
+    ],
+    "machine_max_speed_x": [
+        "250",
+        "250"
+    ],
+    "machine_max_speed_y": [
+        "250",
+        "250"
+    ],
+    "machine_max_speed_z": [
+        "35",
+        "35"
+    ],
+    "machine_start_gcode": "; Optimized Start G-Code for 3D Printing\n\n; Initial Setup and Messaging\nM117 Starting print (ORCA macro start)\nM104 S160\nM117 Starting Preparations for [input_filename_base]\nM117 Set bed temperature and wait - EDDY needs it warm!!!!!\n;M190 [bed_temperature_initial_layer] ; Set bed temperature and wait - EDDY needs it warm!!!!!\n;M190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait - EDDY needs it warm!!!!!\nM190 S65 ; Set bed temperature and wait - EDDY needs it warm!!!!! - but NOT hot ...\nM300 S440 P100\nM117 Starting Preparations\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\nM117 execute CLEAR_PAUSE\nCLEAR_PAUSE\nSET_RETRACTION RETRACTION=[filament_retraction_length] RETRACTIONSPEED=[filament_retraction_speed]\n\n; Home All Axes Once\n;M117 Wait 10 minutes to heat soak EDDY .... grmpf!!!\n;M190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait - EDDY likes it warm\nM190 S65 ; Set bed temperature and wait - EDDY needs it warm!!!!! - but NOT hot ...\n;G4 P600000\nM117 home all axis with G28\n;G28 Z\n;PROBE_EDDY_NG_PROBE_STATIC HOME_Z=1\n;RESTART_KLIpperSCREEN TIME=120\n;HOMING_OVERRIDE_X\n;HOMING_OVERRIDE_Y\n;HOMING_OVERRIDE_Z\nG28 \nM400 ; wait for move to finish\nG4 P1500 ; wait 1500 milliseconds\nPEPS\nPEPS_HOME\nM117 homing complete\nG1 Z2.5 F300\n\n; Set Units and Extrusion Mode\nG21 ; Set units to millimeters\nG90 ; Set all axis to Absolute\nM82 ; Set extrusion to Absolute\n;M83 ; Set extrusion to Absolute\nM107 ; Disable all fans\n\n; Heating and Bed Preparation\nM117 start heating up\n;G1 X340 Y-1 F6000; Park print head off bed nozzle temp and do not wait\nclean_nozzle_position\nM104 S160\n;M190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait - EDDY likes it warm\nM190 S65 ; Set bed temperature and wait - EDDY needs it warm!!!!! - but NOT hot ...\n; Bed Leveling\nM117 z_tilt\n;G28\n;G0 X164.5 Y165 Z20 F6000\nPARKMIDDLE\nM400\nZ_TILT_ADJUST\nM400 ; wait for move to finish\nG4 P1500 ; wait 1500 milliseconds\nG28 Z\nG90\nM83\n\n; COLD wipe\n;; Nozzle Cleaning and Purge\nM117 wiping nozzle at 160 C\nM109 S160 ; set temp to 160 to prevent ozing\nM117 start macro clean_nozzle\nclean_nozzle NOZZLE_TEMP=160\nM117 start macro G12 nozzle wipe\nG12 NOZZLE_TEMP=160 WIPE_COUNT=15\n\n; EDDY_NG TAP\n;G0 X164.5 Y165 Z20 F6000\n;PROBE_EDDY_NG_TAP\nM400 ; wait for move to finish\nG4 P1500 ; wait 1500 milliseconds\nM190 S65 ; Set bed temperature and wait - EDDY needs it warm!!!!! - but NOT hot ...\nTAP_MIDDLE\nM400 ; wait for move to finish\nG4 P1500 ; wait 1500 milliseconds\nM140 S[bed_temperature_initial_layer_single] ; Set bed temperature and do not wait \nPEPS\nPEPS_HOME\nG90\n;M83\n\n; HOT wipe\n;; Nozzle Cleaning and Purge\nM117 wiping nozzle at print temp\n;G1 X340 Y25 F6000; Park print head off bed\nclean_nozzle_position\nM109 S[nozzle_temperature_initial_layer] ; set temp to fits layer\nM117 start macro clean_nozzle\nclean_nozzle  NOZZLE_TEMP=[nozzle_temperature_initial_layer]\nM117 start macro G12 nozzle wipe\nG12 NOZZLE_TEMP=[nozzle_temperature_initial_layer] WIPE_COUNT=15\n\nM117 Auto Bed Level\nBED_MESH_PROFILE LOAD=[filament_type]\n;@BEDLEVELVISUALIZER\nBED_MESH_CALIBRATE ADAPTIVE=1 METHOD=rapid_scan\nG1 Z5.0 F3000 ; Raise nozzle to prevent scratching of heat bed\n;G1 X340 Y25 F3000 ; Move nozzle off bed before heating\nclean_nozzle_position\n\n; heat up for purging\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait - EDDY likes it warm\n\n; Draw Purge Line\nM117 Draw Klipper Purge Line\nLINE_PURGE\n\n; Final Preparations\nM117 set bed temp and wait\nM190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait\nM117 set nozzle temp and wait\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\nG92 E0 ; Set Extruder position to zero\n\n; Skew Correction and Parking\nSKEW_PROFILE LOAD=Calilantern_20251004\nM117 smart park\nM300 S440 P150\nSMART_PARK\n\n; Final Checks and Start\nM117 execute save last file\nsave_last_file\n;LAYER_COUNT:[total_layer_count]\nSAVE_VARIABLE VARIABLE=was_interrupted VALUE=True\nBEEP I=3 DUR=200 FREQ=2000\nM117 Starting up Slicer Start code complete\nM117 Starting print in Slicer\nBEEP I=3 DUR=200 FREQ=2000\nSFS_ENABLE\nM83\nSAVE_GCODE_STATE NAME=STARTING_PRINT\n;------------------------\n;Sweet_Child_o_Mine.g\n;------------------------\n;M117 Sweet Child O Mine\n;------------------------\n;M300 S294 P200 ;D4: 294\n;M300 S588 P200 ;D5: 588\n;M300 S440 P200 ;A4: 440\n;M300 S392 P200 ;G4: 392\n;M300 S784 P200 ;G5: 784\n;M300 S440 P200 ;A4: 440\n;M300 S740 P200 ;F#5: 740\n;M300 S440 P200 ;A4: 440\n;;------------------------\n;M300 S294 P200 ;D4: 294\n;M300 S588 P200 ;D5: 588\n;M300 S440 P200 ;A4: 440\n;M300 S392 P200 ;G4: 392\n;M300 S784 P200 ;G5: 784\n;M300 S440 P200 ;A4: 440\n;M300 S740 P200 ;F#5: 740\n;M300 S440 P200 ;A4: 440\n;;------------------------\n;M300 S330 P200 ;E4: 330\n;M300 S588 P200 ;D5: 588\n;M300 S440 P200 ;A4: 440\n;M300 S392 P200 ;G4: 392\n;M300 S784 P200 ;G5: 784\n;M300 S440 P200 ;A4: 440\n;M300 S740 P200 ;F#5: 740\n;M300 S440 P200 ;A4: 440\n;;------------------------\n;M300 S330 P200 ;E4: 330\n;M300 S588 P200 ;D5: 588\n;M300 S440 P200 ;A4: 440\n;M300 S392 P200 ;G4: 392\n;M300 S784 P200 ;G5: 784\n;M300 S440 P200 ;A4: 440\n;M300 S740 P200 ;F#5: 740\n;M300 S440 P200 ;A4: 440\n;;------------------------\n;M300 S392 P200 ;G4: 392\n;M300 S588 P200 ;D5: 588\n;M300 S440 P200 ;A4: 440\n;M300 S392 P200 ;G4: 392\n;M300 S784 P200 ;G5: 784\n;M300 S440 P200 ;A4: 440\n;M300 S740 P200 ;F#5: 740\n;M300 S440 P200 ;A4: 440\n;;------------------------\n;M300 S392 P200 ;G4: 392\n;M300 S588 P200 ;D5: 588\n;M300 S440 P200 ;A4: 440\n;M300 S392 P200 ;G4: 392\n;M300 S784 P200 ;G5: 784\n;M300 S440 P200 ;A4: 440\n;M300 S740 P200 ;F#5: 740\n;M300 S440 P200 ;A4: 440\n;;------------------------\nM300 S294 P800 ;D4: 294\nM300 S440 P800\nM300 S740 P800\n;------------------------\nM117 Starting!!\n;------------------------\n\nPRINT_START",
+    "max_resonance_avoidance_speed": "150",
+    "min_layer_height": [
+        "0.06"
+    ],
+    "min_resonance_avoidance_speed": "110",
+    "name": "Tronxy X5SA PRO Klipper 0.4 nozzle steel eddy_ng ohne heat soak",
+    "nozzle_type": "hardened_steel",
+    "print_host": "https://klipper-x5sa.tailc88fff.ts.net",
+    "printable_area": [
+        "0x3",
+        "330x3",
+        "330x317",
+        "0x317"
+    ],
+    "printable_height": "375",
+    "printer_notes": "von Marlin auf Klipper umgeschrieben\n\nnach Umbau auf BTT CAN, Octopus Pro, BTT EDDY Duom BTT EBB42",
+    "printer_settings_id": "Tronxy X5SA PRO Klipper 0.4 nozzle steel eddy_ng ohne heat soak",
+    "printhost_apikey": "ecb0641b3ed14c7da00ba8180095a159",
+    "resonance_avoidance": "1",
+    "retract_length_toolchange": [
+        "5"
+    ],
+    "retract_lift_below": [
+        "330"
+    ],
+    "retraction_length": [
+        "0.6"
+    ],
+    "retraction_speed": [
+        "70"
+    ],
+    "support_multi_bed_types": "1",
+    "thumbnails": "12x12/PNG, 24x24/PNG, 48x48/PNG, 64x64/PNG, 220x220/PNG, 300x200/PNG, 300x300/PNG, 230x180/PNG, 180x180/PNG, 70x70/PNG, 95x80/PNG, 95x95/PNG, 160x140/PNG",
+    "time_cost": "0.15",
+    "time_lapse_gcode": ";@SNAPSHOT\n;@OCTOLAPSE TAKE-SNAPSHOT\n;M118  A1 action:SNAPSHOT \nTIMELAPSE_TAKE_FRAME",
+    "travel_slope": [
+        "30"
+    ],
+    "version": "2.2.0.4",
+    "z_hop": [
+        "0.4"
+    ],
+    "z_hop_types": [
+        "Auto Lift"
+    ]
+}

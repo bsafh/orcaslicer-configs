@@ -1,0 +1,54 @@
+{
+    "close_fan_the_first_x_layers": [
+        "0"
+    ],
+    "default_filament_colour": [
+        "#000000"
+    ],
+    "dont_slow_down_outer_wall": [
+        "1"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "fan_cooling_layer_time": [
+        "1000"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_flow_ratio": [
+        "0.822"
+    ],
+    "filament_ramming_parameters": [
+        "10 10| 0.05 6.6 0.45 6.8 0.95 7.8 1.45 8.3 1.95 9.7 2.45 10 2.95 7.6 3.45 7.6 3.95 7.6 4.45 7.6 4.95 7.6"
+    ],
+    "filament_settings_id": [
+        "Fan Test GEEETECH PLA schwarz @Tronxy X5SA PRO 0.4 nozzle"
+    ],
+    "from": "User",
+    "full_fan_speed_layer": [
+        "500"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "inherits": "GEEETECH PLA weiß @Geeetech A30 Pro 0.4 nozzle",
+    "name": "Fan Test GEEETECH PLA schwarz @Tronxy X5SA PRO 0.4 nozzle",
+    "nozzle_temperature": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "240"
+    ],
+    "nozzle_temperature_range_high": [
+        "245"
+    ],
+    "pressure_advance": [
+        "0.056"
+    ],
+    "version": "2.1.1.0"
+}

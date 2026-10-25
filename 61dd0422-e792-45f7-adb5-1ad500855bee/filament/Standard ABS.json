@@ -1,0 +1,88 @@
+{
+    "close_fan_the_first_x_layers": [
+        "0"
+    ],
+    "compatible_printers": [
+        "Geeetech A30 Pro 0.4 nozzle"
+    ],
+    "default_filament_colour": [
+        "#000000"
+    ],
+    "dont_slow_down_outer_wall": [
+        "1"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "fan_cooling_layer_time": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "15"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_cost": [
+        "7.25"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode\nCLEAR_ACTIVE_SPOOL\nRESTORE_GCODE_STATE NAME=ABS_START"
+    ],
+    "filament_flow_ratio": [
+        "0.9343"
+    ],
+    "filament_max_volumetric_speed": [
+        "22.5"
+    ],
+    "filament_retraction_length": [
+        "1.25"
+    ],
+    "filament_retraction_speed": [
+        "25"
+    ],
+    "filament_settings_id": [
+        "Standard ABS"
+    ],
+    "filament_shrink": [
+        "98.938%"
+    ],
+    "filament_shrinkage_compensation_z": [
+        "98.938%"
+    ],
+    "filament_start_gcode": [
+        "; Filament gcode\nUPDATE_DELAYED_GCODE ID=RESTORE_PROBE_OFFSET DURATION=1.0\nSET_ACTIVE_SPOOL ID=73\nSAVE_GCODE_STATE NAME=ABS_START"
+    ],
+    "filament_vendor": [
+        "TecBears"
+    ],
+    "from": "User",
+    "inherits": "Generic ABS @System",
+    "is_custom_defined": "0",
+    "name": "Standard ABS",
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "230"
+    ],
+    "nozzle_temperature_range_low": [
+        "210"
+    ],
+    "pressure_advance": [
+        "0.056"
+    ],
+    "slow_down_layer_time": [
+        "20"
+    ],
+    "textured_plate_temp": [
+        "95"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "95"
+    ],
+    "version": "2.3.0.3"
+}

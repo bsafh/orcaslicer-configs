@@ -1,0 +1,19 @@
+{
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "1.5"
+    ],
+    "filament_settings_id": [
+        "GEEETECH PLA Silk Gold @X5SA 0.4 nozzle"
+    ],
+    "from": "User",
+    "inherits": "GEEETECH PLA Silk Gold @Geeetech A30 Pro 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "GEEETECH PLA Silk Gold @X5SA 0.4 nozzle",
+    "pressure_advance": [
+        "0.056"
+    ],
+    "version": "2.2.0.4"
+}

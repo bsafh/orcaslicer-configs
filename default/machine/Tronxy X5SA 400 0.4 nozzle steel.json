@@ -1,0 +1,23 @@
+{
+    "from": "User",
+    "inherits": "Tronxy X5SA 400 0.4 nozzle",
+    "is_custom_defined": "0",
+    "machine_end_gcode": "M117 Finishing print\n; ORCA\nM400 ; wait for buffer to clear\n; CURA 5.8.0\nG91 ; Set Positioning to Relative\nM83 ; Set Extruder to Relative\nG92 E0 ; Reset Extruder\nG1 E-4 F3000 ; Retract 4mm of filament\nG1 Z0.2 ; Raise nozzle .2mm\nG90 ; Set positioning to absolute\nG1 X0 Y0 ; Park print head\nG91 ; Set Positioning to Relative\nG1 Z10 ; Raise nozzle 10mm\nM106 S0 ; Turn off part fan\nM104 S0 ; Set nozzle temp to zero\nM140 S0 ; set bed temp to zero\nM84 X Y Z E ; Disable X Y Z and E steppers\nM117 Printer has shut down\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300",
+    "machine_start_gcode": "M300 S440 P200\nM300 S660 P250\nM300 S880 P300\nM117 Starting up\n; X5SA Start Code\nG21 ; Set units to millimeters\nG90 ; Set all axis to Absolute\nM82 ; Set extrusion to Absolute\nM107 ; Disable all fans\nM190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait\nG28 ; Home all axis\n; Uncomment the line below to enable ABL Mesh probing\nG29 ; Probe bed mesh for ABL\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\nM117 Level complete\n; For best results do not run nozzle heater while performing ABL\nG1 Z5.0 ; Raise nozzle to prevent scratching of heat bed\nG1 X0 Y0 ; Move nozzle to Home before heating\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\nG92 E0 ; Set Extruder position to zero\n; Uncomment the following lines to enable nozzle purge line along left edge of bed\n; M117 printing purge line\n; G1 Z2.0 F3000 ; Raise Z axis\n; G1 X1.1 Y20 Z0.2 F3600.0 ; Move to purge line start position\n; G1 Y220 F1500.0 E10 ; Draw first purge line\n; G1 X1.4 F3600.0 ; Move to side\n; G1 Y20 F1500.0 E20 ; Draw second purge line\n; G92 E0 ; Reset Extruder\n; G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed\n; G1 X5 Y20 Z0.2 F3600.0 ; Move over to finish nozzle wipe\n; G92 E0\nM117 Starting print\n",
+    "name": "Tronxy X5SA 400 0.4 nozzle steel",
+    "nozzle_type": "hardened_steel",
+    "printable_area": [
+        "0x0",
+        "330x0",
+        "330x330",
+        "0x330"
+    ],
+    "printer_settings_id": "Tronxy X5SA 400 0.4 nozzle steel",
+    "retraction_length": [
+        "8"
+    ],
+    "retraction_speed": [
+        "70"
+    ],
+    "version": "2.2.0.4"
+}

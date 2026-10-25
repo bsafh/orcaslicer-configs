@@ -1,0 +1,123 @@
+{
+    "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0",
+    "default_filament_profile": [],
+    "default_print_profile": "",
+    "deretraction_speed": [
+        "0"
+    ],
+    "extruder_clearance_height_to_lid": "120",
+    "extruder_clearance_height_to_rod": "40",
+    "extruder_clearance_radius": "40",
+    "extruder_colour": [
+        ""
+    ],
+    "from": "User",
+    "inherits": "Tronxy X5SA 400 0.4 nozzle",
+    "is_custom_defined": "0",
+    "machine_end_gcode": "M117 Finishing print\n; ORCA\nM400 ; wait for buffer to clear\n; CURA 5.8.0\nG91 ; Set Positioning to Relative\nM83 ; Set Extruder to Relative\nG92 E0 ; Reset Extruder\nG1 E-4 F3000 ; Retract 4mm of filament\nG1 Z0.2 ; Raise nozzle .2mm\nG90 ; Set positioning to absolute\nG1 X0 Y0 ; Park print head\nG91 ; Set Positioning to Relative\nG1 Z10 ; Raise nozzle 10mm\nM106 S0 ; Turn off part fan\nM104 S0 ; Set nozzle temp to zero\nM140 S0 ; set bed temp to zero\nM84 X Y Z E ; Disable X Y Z and E steppers\nM117 Printer has shut down\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300",
+    "machine_max_acceleration_e": [
+        "5000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "1500",
+        "1250"
+    ],
+    "machine_max_acceleration_retracting": [
+        "1500",
+        "1250"
+    ],
+    "machine_max_acceleration_x": [
+        "1000",
+        "1000"
+    ],
+    "machine_max_acceleration_y": [
+        "1000",
+        "1000"
+    ],
+    "machine_max_acceleration_z": [
+        "500",
+        "200"
+    ],
+    "machine_max_jerk_e": [
+        "2.5",
+        "2.5"
+    ],
+    "machine_max_jerk_x": [
+        "10",
+        "10"
+    ],
+    "machine_max_jerk_y": [
+        "10",
+        "10"
+    ],
+    "machine_max_jerk_z": [
+        "0.2",
+        "0.4"
+    ],
+    "machine_max_speed_e": [
+        "120",
+        "120"
+    ],
+    "machine_max_speed_x": [
+        "500",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "500",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "12",
+        "12"
+    ],
+    "machine_min_extruding_rate": [
+        "0",
+        "0"
+    ],
+    "machine_min_travel_rate": [
+        "0",
+        "0"
+    ],
+    "machine_start_gcode": "M300 S440 P200\nM300 S660 P250\nM300 S880 P300\nM117 Starting up\n; X5SA Start Code\nG21 ; Set units to millimeters\nG90 ; Set all axis to Absolute\nM82 ; Set extrusion to Absolute\nM107 ; Disable all fans\nM190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait\n;G28 ; Home all axis - crashed bed into head\nG28 X Y\n; Uncomment the line below to enable ABL Mesh probing\nG29 ; Probe bed mesh for ABL\n; For best results do not run nozzle heater while performing ABL\nG1 Z5.0 ; Raise nozzle to prevent scratching of heat bed\nG1 X0 Y0 ; Move nozzle to Home before heating\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\nG92 E0 ; Set Extruder position to zero\n; Uncomment the following lines to enable nozzle purge line along left edge of bed\nM117 printing purge line\nG1 Z2.0 F3000 ; Raise Z axis\nG1 X8.1 Y20 Z0.2 F3600.0 ; Move to purge line start position\nG1 Y220 F1500.0 E10 ; Draw first purge line\nG1 X8.4 F3600.0 ; Move to side\nG1 Y20 F1500.0 E20 ; Draw second purge line\nG92 E0 ; Reset Extruder\nG1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed\nG1 X5 Y20 Z0.2 F3600.0 ; Move over to finish nozzle wipe\nG92 E0\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\n\nM117 Starting print\n",
+    "max_layer_height": [
+        "0"
+    ],
+    "min_layer_height": [
+        "0.07"
+    ],
+    "name": "Tronxy X5SA PRO 330 0.4 nozzle steel cura start-end",
+    "nozzle_type": "hardened_steel",
+    "printable_area": [
+        "0x0",
+        "330x0",
+        "330x330",
+        "0x330"
+    ],
+    "printable_height": "100",
+    "printer_model": "",
+    "printer_settings_id": "Tronxy X5SA PRO 330 0.4 nozzle steel cura start-end",
+    "printer_variant": "",
+    "retract_before_wipe": [
+        "100%"
+    ],
+    "retract_length_toolchange": [
+        "10"
+    ],
+    "retract_when_changing_layer": [
+        "0"
+    ],
+    "retraction_length": [
+        "8"
+    ],
+    "retraction_speed": [
+        "70"
+    ],
+    "version": "2.2.0.4",
+    "wipe": [
+        "0"
+    ],
+    "z_hop": [
+        "0.4"
+    ]
+}

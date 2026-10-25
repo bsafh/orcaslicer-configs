@@ -1,0 +1,19 @@
+{
+    "bottom_surface_pattern": "zig-zag",
+    "brim_type": "brim_ears",
+    "enable_support": "1",
+    "from": "User",
+    "inherits": "0.20mm Standard @Geeetech common",
+    "is_custom_defined": "0",
+    "name": "0.20mm PLA Standard @Geeetech common ",
+    "print_settings_id": "0.20mm PLA Standard @Geeetech common ",
+    "sparse_infill_density": "10%",
+    "support_bottom_z_distance": "0.35",
+    "support_object_first_layer_gap": "0.75",
+    "support_object_xy_distance": "0.9",
+    "support_on_build_plate_only": "1",
+    "support_top_z_distance": "0.35",
+    "support_type": "tree(auto)",
+    "top_surface_pattern": "zig-zag",
+    "version": "2.3.0.3"
+}

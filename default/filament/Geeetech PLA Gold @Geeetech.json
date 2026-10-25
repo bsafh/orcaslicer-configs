@@ -1,0 +1,49 @@
+{
+    "cool_plate_temp": [
+        "70"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "70"
+    ],
+    "eng_plate_temp": [
+        "70"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "70"
+    ],
+    "filament_cost": [
+        "12.5"
+    ],
+    "filament_flow_ratio": [
+        "0.95"
+    ],
+    "filament_settings_id": [
+        "Geeetech PLA Gold @Geeetech"
+    ],
+    "filament_vendor": [
+        "Geeetech"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "70"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "70"
+    ],
+    "inherits": "Generic PLA @Geeetech",
+    "is_custom_defined": "0",
+    "name": "Geeetech PLA Gold @Geeetech",
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "70"
+    ],
+    "version": "2.2.0.4"
+}

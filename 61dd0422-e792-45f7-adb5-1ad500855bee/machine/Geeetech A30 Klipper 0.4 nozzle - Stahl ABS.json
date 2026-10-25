@@ -1,0 +1,110 @@
+{
+    "adaptive_bed_mesh_margin": "10",
+    "auxiliary_fan": "1",
+    "bed_custom_texture": "S:\\transfer\\3D-print\\Software\\OrcaSlicer-settings\\klipper_geeetech_logo.png",
+    "bed_mesh_max": "280,330",
+    "bed_mesh_min": "5,10",
+    "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0\n",
+    "deretraction_speed": [
+        "50"
+    ],
+    "from": "User",
+    "gcode_flavor": "klipper",
+    "inherits": "Geeetech A30 Pro 0.4 nozzle",
+    "is_custom_defined": "0",
+    "layer_change_gcode": ";------------------------------------\n;layer No [layer_num] > Print Height[layer_z] mm\n;LAYER:[layer_num]\n;------------------------------------\n;YUMI_PLR\nLOG_Z\n;@SNAPSHOT\n;M118  A1 action:SNAPSHOT \nM117 Layer {layer_num + 1}/[total_layer_count]\n",
+    "machine_end_gcode": "M117 Finishing print (ORCA print end gcode)\n; ORCA\nM400 ; wait for buffer to clear\n;;;SET_SKEW CLEAR=1\n; CURA 5.8.0\nG91 ; Set Positioning to Relative\nM83 ; Set Extruder to Relative\nG92 E0 ; Reset Extruder\nG1 E-7F3000 ; Retract 7mm of filament\nG1 Z5.5 F500 ; Raise nozzle 2.5mm\nG90 ; Set positioning to absolute\nG1 X161 Y-4 F5000 ; Park print head\nG91 ; Set Positioning to Relative\nG1 Z10 ; Raise nozzle 10mm\nG90 ; ensure absolute positioning\nG1 X1 Y340 F3000 ; bring bed forward\nM106 S0 ; Turn off part fan\nM104 S175 ; extrude stays possible for PRINT_END\n;M104 S0 ; Set nozzle temp to zero\nM140 S0 ; set bed temp to zero\nG90 ; ensure absolute positioning\nM84 X Y Z Z1 E ; Disable X Y Z and E steppers\nM84 ; disable all motors\n;YUMI_PLR\nSAVE_VARIABLE VARIABLE=was_interrupted VALUE=False\nM117 execute clear last file\nclear_last_file\nG31 ; YUMI PLR clear\n;BEEP\nBEEP\nBEEP I=3 DUR=200 FREQ=800\nM117 Printer has shut down\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\nTIMELAPSE_RENDER ; only if auto render is off\nRESUME\n; PRINT_END\nM104 S0 ; Set nozzle temp to zero\nM117 end or Orca print end gcode\nEND_PRINT\nRESTART",
+    "machine_max_acceleration_e": [
+        "1000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "1700",
+        "1000"
+    ],
+    "machine_max_acceleration_retracting": [
+        "1700",
+        "1000"
+    ],
+    "machine_max_acceleration_x": [
+        "5500",
+        "500"
+    ],
+    "machine_max_acceleration_y": [
+        "1700",
+        "500"
+    ],
+    "machine_max_jerk_x": [
+        "12",
+        "8"
+    ],
+    "machine_max_jerk_y": [
+        "12",
+        "8"
+    ],
+    "machine_max_jerk_z": [
+        "0.6",
+        "0.4"
+    ],
+    "machine_max_speed_e": [
+        "100",
+        "60"
+    ],
+    "machine_max_speed_x": [
+        "300",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "300",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "55",
+        "10"
+    ],
+    "machine_start_gcode": "; Optimized Start G-Code for 3D Printing\n\n; Initial Setup and Messaging\nM117 Starting print (ORCA macro start)\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\nSET_STEPPER_ENABLE STEPPER=stepper_x ENABLE=1 ; enable stepper X\nSET_STEPPER_ENABLE STEPPER=stepper_y ENABLE=1 ; enable stepper Y\nSET_STEPPER_ENABLE STEPPER=stepper_z ENABLE=1 ; enable stepper Z\nSET_STEPPER_ENABLE STEPPER=stepper_z1 ENABLE=1 ; enable stepper Z1\nSET_STEPPER_ENABLE STEPPER=extruder ENABLE=1 ; enable stepper E\nM140 S[bed_temperature_initial_layer_single] ; Set bed temperature and do not wait\nM104 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and do not wait\nM117 execute CLEAR_PAUSE\nCLEAR_PAUSE\nSET_RETRACTION RETRACTION=[filament_retraction_length] RETRACTIONSPEED=[filament_retraction_speed]\n; Home All Axes Once\nM117 home all axis with G28\nG28\nM117 homing complete\n\n; Set Units and Extrusion Mode\nG21 ; Set units to millimeters\nG90 ; Set all axis to Absolute\nM82 ; Set extrusion to Absolute\nM107 ; Disable all fans\n\n; Heating and Bed Preparation\nM117 start heating up bed\nG1 X161 Y-4 Z15 F3000 ; Move to heat-up position over purge bucket\nM190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait\n\n; Bed Leveling\nM117 Auto Bed Level\nBED_MESH_PROFILE LOAD=[filament_type]\nBED_MESH_CALIBRATE\nG1 Z15.0 F300 ; Raise nozzle to prevent scratching of heat bed\nG1 X161 Y-4 F3000 ; Move nozzle to purge bucket position before heating\n\n; Nozzle Heating and Cleaning\n;M117 wiping nozzle\n;M109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\n;M117 start macro clean_nozzle\n;clean_nozzle  NOZZLE_TEMP=[nozzle_temperature_initial_layer]\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\n;M117 start macro G12 nozzle wipe\n;G12 NOZZLE_TEMP=[nozzle_temperature_initial_layer] WIPE_COUNT=10\n\nG90\nM117 Set bed temperature and wait\nM190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait\n\n; Draw Purge Line\nM117 Draw Klipper Purge Line\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\n;KLIPPER_PURGE\nLINE_PURGE\nSMART_PARK\n\n; Final Preparations\nM117 set nozzle temp\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\nG92 E0 ; Reset Extruder\nG90 \n;G28 \n\n\n; Skew Correction\nSKEW_PROFILE LOAD=skew_a30_20250417\n\n; Final Checks and Start\nM117 execute save last file\nsave_last_file\nSAVE_VARIABLE VARIABLE=was_interrupted VALUE=True\n;LAYER_COUNT:[total_layer_count]\nBEEP I=3 DUR=200 FREQ=2000\nM117 Starting up Slicer Start code complete\nM117 Starting print in Slicer\nBEEP I=3 DUR=200 FREQ=2000\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\nPRINT_START",
+    "max_layer_height": [
+        "0.32"
+    ],
+    "min_layer_height": [
+        "0.06"
+    ],
+    "name": "Geeetech A30 Klipper 0.4 nozzle - Stahl ABS",
+    "nozzle_type": "hardened_steel",
+    "print_host": "http://192.168.80.47",
+    "print_host_webui": "Geeetech A30 Klipper",
+    "printable_area": [
+        "0x0",
+        "320x0",
+        "320x333",
+        "0x333"
+    ],
+    "printable_height": "381",
+    "printer_notes": "modifiziert für alten A30 (nicht A30 pro) mit Klipper\nDruckkopf: V6 Volcano Clone",
+    "printer_settings_id": "Geeetech A30 Klipper 0.4 nozzle - Stahl ABS",
+    "retract_length_toolchange": [
+        "1"
+    ],
+    "retract_lift_below": [
+        "380"
+    ],
+    "retract_restart_extra_toolchange": [
+        "1"
+    ],
+    "retraction_length": [
+        "0.5"
+    ],
+    "retraction_speed": [
+        "60"
+    ],
+    "thumbnails": "48x48/PNG, 300x300/PNG, 96x96/PNG, 150x150/PNG, 400x400/PNG, 12x12/PNG, 64x64/PNG, 220x220/PNG",
+    "time_cost": "0.15",
+    "time_lapse_gcode": ";@SNAPSHOT\n;@OCTOLAPSE TAKE-SNAPSHOT\n;M118  A1 action:SNAPSHOT \nTIMELAPSE_TAKE_FRAME",
+    "version": "2.2.0.4",
+    "z_hop": [
+        "0.8"
+    ],
+    "z_hop_types": [
+        "Auto Lift"
+    ]
+}

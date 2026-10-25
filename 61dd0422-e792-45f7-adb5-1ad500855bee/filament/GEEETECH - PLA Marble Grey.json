@@ -1,0 +1,69 @@
+{
+	"cool_plate_temp": [
+		"60"
+	],
+	"cool_plate_temp_initial_layer": [
+		"70"
+	],
+	"default_filament_colour": [
+		"#cccac9"
+	],
+	"eng_plate_temp": [
+		"60"
+	],
+	"eng_plate_temp_initial_layer": [
+		"70"
+	],
+	"filament_cost": [
+		"14.5"
+	],
+	"filament_density": [
+		"1.31"
+	],
+	"filament_deretraction_speed": [
+		"25"
+	],
+	"filament_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"filament_flow_ratio": [
+		"0.94"
+	],
+	"filament_retraction_length": [
+		"5"
+	],
+	"filament_retraction_speed": [
+		"25"
+	],
+	"filament_settings_id": [
+		"GEEETECH - PLA Marble Grey"
+	],
+	"filament_start_gcode": [
+		"ASSERT_ACTIVE_FILAMENT ID=23"
+	],
+	"filament_vendor": [
+		"GEEETECH"
+	],
+	"from": "User",
+	"hot_plate_temp": [
+		"60"
+	],
+	"hot_plate_temp_initial_layer": [
+		"70"
+	],
+	"inherits": "Generic PLA @System",
+	"name": "GEEETECH - PLA Marble Grey",
+	"nozzle_temperature": [
+		"190"
+	],
+	"nozzle_temperature_initial_layer": [
+		"195"
+	],
+	"textured_plate_temp": [
+		"60"
+	],
+	"textured_plate_temp_initial_layer": [
+		"70"
+	],
+	"version": "2.1.1.0"
+}

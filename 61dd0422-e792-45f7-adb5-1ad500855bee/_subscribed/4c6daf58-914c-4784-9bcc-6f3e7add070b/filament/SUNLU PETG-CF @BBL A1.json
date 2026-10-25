@@ -1,0 +1,45 @@
+{
+	"fan_max_speed": [
+		"50"
+	],
+	"fan_min_speed": [
+		"20"
+	],
+	"filament_cost": [
+		"28.99"
+	],
+	"filament_density": [
+		"1.23"
+	],
+	"filament_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"filament_flow_ratio": [
+		"1"
+	],
+	"filament_max_volumetric_speed": [
+		"16"
+	],
+	"filament_settings_id": [
+		"SUNLU PETG-CF @BBL A1"
+	],
+	"filament_vendor": [
+		"SUNLU"
+	],
+	"from": "Bundle",
+	"inherits": "Generic PETG-CF @BBL A1",
+	"name": "SUNLU PETG-CF @BBL A1",
+	"nozzle_temperature": [
+		"250"
+	],
+	"nozzle_temperature_initial_layer": [
+		"250"
+	],
+	"nozzle_temperature_range_high": [
+		"250"
+	],
+	"temperature_vitrification": [
+		"75"
+	],
+	"version": "2.1.0.14"
+}

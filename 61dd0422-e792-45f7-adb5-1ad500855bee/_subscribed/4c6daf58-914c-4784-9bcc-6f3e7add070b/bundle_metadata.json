@@ -1,0 +1,18 @@
+{
+    "author": "5f7ca1ad-3b48-4bfa-be9b-8e06958bdb29",
+    "description": "# Sunlu PETG-CF Model Rocket Print Settings\n\n**MAKE SURE TO DRY YOUR PETG-CF BEFORE PRINTING! IT MAKES A HUGE DIFFERENCE IN QUALITY!**\n\nThis bundle makes several changes over the defaults (obviously) including:\n- Line Width Tuning\n- Seam adjustments (scarf seams, seam position)\n- Arachne Wall Generator\n- Small area flow compensation\n- Reverse on even overhangs (only internal)\n- Infill Adjustments\n- Small outer wall speed adjustments\n- Normal Grid Supports\n- Other tunings",
+    "filament_presets": [
+        "SUNLU PETG-CF @BBL A1"
+    ],
+    "id": "4c6daf58-914c-4784-9bcc-6f3e7add070b",
+    "imported_time": 1782200494,
+    "name": "PETG-CF Class-1 Rocket",
+    "print_presets": [
+        "0.30mm Rocket @BBL A1 0.6 nozzle"
+    ],
+    "printer_presets": [
+        "Bambu Lab A1 0.6 nozzle - Copy"
+    ],
+    "updated_time": 0,
+    "version": "1.00"
+}

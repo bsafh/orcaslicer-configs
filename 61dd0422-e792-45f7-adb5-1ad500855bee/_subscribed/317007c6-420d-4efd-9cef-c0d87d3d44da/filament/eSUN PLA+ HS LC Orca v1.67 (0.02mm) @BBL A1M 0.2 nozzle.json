@@ -1,0 +1,75 @@
+{
+	"close_fan_the_first_x_layers": [
+		"4"
+	],
+	"enable_pressure_advance": [
+		"1"
+	],
+	"fan_max_speed": [
+		"100"
+	],
+	"fan_min_speed": [
+		"100"
+	],
+	"filament_deretraction_speed": [
+		"40"
+	],
+	"filament_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"filament_flow_ratio": [
+		"1"
+	],
+	"filament_retract_before_wipe": [
+		"80%"
+	],
+	"filament_retraction_length": [
+		"0.5"
+	],
+	"filament_retraction_minimum_travel": [
+		"0.4"
+	],
+	"filament_retraction_speed": [
+		"40"
+	],
+	"filament_settings_id": [
+		"eSUN PLA+ HS LC Orca v1.67 (0.02mm) @BBL A1M 0.2 nozzle"
+	],
+	"filament_wipe_distance": [
+		"0.4"
+	],
+	"filament_z_hop": [
+		"0.2"
+	],
+	"filament_z_hop_types": [
+		"Spiral Lift"
+	],
+	"from": "Bundle",
+	"full_fan_speed_layer": [
+		"8"
+	],
+	"inherits": "eSUN PLA+ @BBL A1M 0.2 nozzle",
+	"name": "eSUN PLA+ HS LC Orca v1.67 (0.02mm) @BBL A1M 0.2 nozzle",
+	"nozzle_temperature": [
+		"212"
+	],
+	"nozzle_temperature_initial_layer": [
+		"212"
+	],
+	"overhang_fan_threshold": [
+		"10%"
+	],
+	"pressure_advance": [
+		"0.25"
+	],
+	"slow_down_for_layer_cooling": [
+		"0"
+	],
+	"slow_down_min_speed": [
+		"24"
+	],
+	"supertack_plate_temp_initial_layer": [
+		"50"
+	],
+	"version": "1.10.0.35"
+}

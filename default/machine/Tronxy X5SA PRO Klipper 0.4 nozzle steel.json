@@ -1,0 +1,113 @@
+{
+    "adaptive_bed_mesh_margin": "10",
+    "auxiliary_fan": "1",
+    "bed_custom_texture": "/srv/data/cifs/truenas/alldata/data/transfer/3D-print/Software/OrcaSlicer-settings/klipper_tronxy_logo.png",
+    "bed_exclude_area": [
+        "0x0",
+        "1x0",
+        "1x71",
+        "7x71",
+        "7x86",
+        "1x86",
+        "1x222",
+        "7x222",
+        "7x235",
+        "1x235",
+        "1x323",
+        "1x324",
+        "327x324",
+        "327x237",
+        "321x237",
+        "321x222",
+        "327x222",
+        "327x86",
+        "321x86",
+        "321x71",
+        "327x71",
+        "327x0",
+        "0x0"
+    ],
+    "bed_mesh_max": "290,290",
+    "bed_mesh_min": "20,20",
+    "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0",
+    "default_filament_profile": [
+        "Generic PLA @System"
+    ],
+    "from": "User",
+    "gcode_flavor": "klipper",
+    "inherits": "Tronxy X5SA 400 0.4 nozzle",
+    "is_custom_defined": "0",
+    "layer_change_gcode": ";------------------------------------\n;layer No [layer_num] > Print Height[layer_z] mm\n;LAYER:[layer_num]\n;------------------------------------\n;YUMI_PLR\nLOG_Z\n;@SNAPSHOT\n;M118  A1 action:SNAPSHOT \nM117 Layer {layer_num + 1}/[total_layer_count]\n",
+    "machine_end_gcode": "M117 Finishing print (ORCA print end gcode)\n; ORCA\nM400 ; wait for buffer to clear\nSET_SKEW CLEAR=1\n; CURA 5.8.0\nG91 ; Set Positioning to Relative\nM83 ; Set Extruder to Relative\nG92 E0 ; Reset Extruder\nG1 E-1.5 F3000 ; Retract 4mm of filament\nG1 Z0.2 ; Raise nozzle .2mm\nG90 ; Set positioning to absolute\nG1 X0 Y0 ; Park print head\nG91 ; Set Positioning to Relative\nG1 Z10 ; Raise nozzle 10mm\nM106 S0 ; Turn off part fan\nM104 S0 ; Set nozzle temp to zero\nM140 S0 ; set bed temp to zero\nM84 X Y Z E ; Disable X Y Z and E steppers\n;YUMI_PLR\nSAVE_VARIABLE VARIABLE=was_interrupted VALUE=False\nM117 execute clear last file\nclear_last_file\nG31\n;BEEP\nBEEP I=3 DUR=200 FREQ=800\nM117 Printer has shut down\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\n; TIMELAPSE_RENDER only if auto render is off\n; PRINT_END\nM117 end or Orca print end gcode\nEND_PRINT",
+    "machine_max_acceleration_e": [
+        "1000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "3150"
+    ],
+    "machine_max_acceleration_retracting": [
+        "3150"
+    ],
+    "machine_max_acceleration_x": [
+        "3150"
+    ],
+    "machine_max_acceleration_y": [
+        "3150"
+    ],
+    "machine_max_acceleration_z": [
+        "200"
+    ],
+    "machine_max_speed_e": [
+        "500"
+    ],
+    "machine_max_speed_x": [
+        "400"
+    ],
+    "machine_max_speed_y": [
+        "400"
+    ],
+    "machine_max_speed_z": [
+        "15"
+    ],
+    "machine_start_gcode": "M117 Starting print (ORCA macro start)\nM300 S440 P100\nM117 Starting Preparations\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\nM117 execute CLEAR_PAUSE\nCLEAR_PAUSE\nRETRACTION=[filament_retraction_length] RETRACTIONSPEED=[filament_retraction_speed] \nM117 home all axis with G28\nG28\nM117 homing complete\n; START_PRINT\n;TIMELAPSE_TAKE_FRAME\n; X5SA Start Code\nG21 ; Set units to millimeters\nG90 ; Set all axis to Absolute\nM82 ; Set extrusion to Absolute\nM107 ; Disable all fans\nM117 start heating up\nM190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\n;TIMELAPSE_TAKE_FRAME\n;G28 O L ; Home all \"untrusted\" axes\n;G28 ; Home all axes\nTIMELAPSE_TAKE_FRAME\n;G28 X Y\n; Uncomment the line below to enable ABL Mesh probing\nM117 Auto Bed Level\nBED_MESH_PROFILE LOAD=[filament_type]\n@BEDLEVELVISUALIZER\t\n;G29 ; Probe bed mesh for ABL\n; Klipper Bed Mesh\n;TIMELAPSE_TAKE_FRAME\nBED_MESH_CALIBRATE \nTIMELAPSE_TAKE_FRAME\n; KAMP adaptive bed mesh\n; For best results do not run nozzle heater while performing ABL\nG1 Z5.0 F3000 ; Raise nozzle to prevent scratching of heat bed\nG1 X0 Y0 F3000 ; Move nozzle to Home before heating\nTIMELAPSE_TAKE_FRAME\nM117 wiping nozzle\n;M109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\n;TIMELAPSE_TAKE_FRAME\nM117 start macro clean_nozzle\nclean_nozzle  NOZZLE_TEMP=[nozzle_temperature_initial_layer] \n;TIMELAPSE_TAKE_FRAME\n;SMART_PARK\nM117 start macro G12 nozzle wipe\nG12 NOZZLE_TEMP=[nozzle_temperature_initial_layer] WIPE_COUNT=15 \n;TIMELAPSE_TAKE_FRAME\nM117 Smart Park\nSMART_PARK\nM117 set nozzle temp\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\nG92 E0 ; Set Extruder position to zero\n; Uncomment the following lines to enable nozzle purge line along left edge of bed\nM117 Draw Purge Lines\n;TIMELAPSE_TAKE_FRAME\nM300 S440 P200\n;;G1 Z2.0 F3000 ; Raise Z axis\n;;G1 X10.1 Y20 Z0.16 F3600.0 ; Move to purge line start position\n;;G1 Y220 F1500.0 E10 ; Draw first purge line\n;;G1 X10.4 F3600.0 ; Move to side\n;;G1 Y20 F1500.0 E20 ; Draw second purge line\n;;G92 E0 ; Reset Extruder\n;;G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed\n;;G1 X5 Y20 Z0.2 F3600.0 ; Move over to finish nozzle wipe\nG92 E0\nSKEW_PROFILE LOAD=skew_profile_20250103\nM117 Start KAMP\nM300 S440 P150\nSMART_PARK\nM109 S[nozzle_temperature_initial_layer] T0 ; Set nozzle temp and wait\nM190 S[bed_temperature_initial_layer_single] ; Set bed temperature and wait\n; KAMP purge\n;TIMELAPSE_TAKE_FRAME\nLINE_PURGE\nTIMELAPSE_TAKE_FRAME\n;VORON_PURGE\n; YUMI_PLR\nG31 ; YUMI Clear PLR\nM117 execute save last file\nsave_last_file\nSAVE_VARIABLE VARIABLE=was_interrupted VALUE=True\n;beep\nM300 S440 P200\nM300 S660 P250\nM300 S880 P300\nM117 Starting up Slicer Start code complete\nM117 Starting print in Slicer\nBEEP I=3 DUR=200 FREQ=2000\n;LAYER_COUNT:[total_layer_count]\n;PRINT_START BED=[bed_temperature_initial_layer_single] HOTEND=[nozzle_temperature_initial_layer] FILAMENT_PROFILE=[filament_type]\nPRINT_START",
+    "min_layer_height": [
+        "0.06"
+    ],
+    "name": "Tronxy X5SA PRO Klipper 0.4 nozzle steel",
+    "nozzle_type": "stainless_steel",
+    "printable_area": [
+        "0x3",
+        "328x3",
+        "328x330",
+        "0x330"
+    ],
+    "printable_height": "381.75",
+    "printer_notes": "von Marlin auf Klipper umgeschrieben",
+    "printer_settings_id": "Tronxy X5SA PRO Klipper 0.4 nozzle steel",
+    "retract_length_toolchange": [
+        "10"
+    ],
+    "retract_lift_below": [
+        "351"
+    ],
+    "retract_when_changing_layer": [
+        "0"
+    ],
+    "retraction_length": [
+        "1.5"
+    ],
+    "retraction_speed": [
+        "70"
+    ],
+    "support_multi_bed_types": "1",
+    "thumbnails": "12x12/PNG, 24x24/PNG, 48x48/PNG, 64x64/PNG, 220x220/PNG, 300x200/PNG, 300x300/PNG, 230x180/PNG, 180x180/PNG, 70x70/PNG, 95x80/PNG, 95x95/PNG, 160x140/PNG",
+    "time_cost": "0.15",
+    "time_lapse_gcode": "@SNAPSHOT\n@OCTOLAPSE TAKE-SNAPSHOT\n;M118  A1 action:SNAPSHOT \nTIMELAPSE_TAKE_FRAME",
+    "version": "2.2.0.4",
+    "z_hop": [
+        "0.4"
+    ],
+    "z_hop_types": [
+        "Normal Lift"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "filament_settings_id": [
+        "Generic PLA bambu"
+    ],
+    "from": "User",
+    "inherits": "Generic PLA(coffee_bag_complete_final_updated.3mf)",
+    "is_custom_defined": "0",
+    "name": "Generic PLA bambu",
+    "version": "0.0.0.0"
+}

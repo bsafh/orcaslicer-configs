@@ -1,0 +1,37 @@
+{
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode\n; filament end gcode \n;SET_GCODE_OFFSET Z=0 MOVE=1\nRESTORE_GCODE_STATE NAME=PLA_START"
+    ],
+    "filament_retraction_length": [
+        "5"
+    ],
+    "filament_retraction_speed": [
+        "25"
+    ],
+    "filament_settings_id": [
+        "Geeetech PLA @A30"
+    ],
+    "filament_start_gcode": [
+        "; Filament gcode\nSAVE_GCODE_STATE NAME=PLA_START\n;SET_GCODE_OFFSET Z=0.025 MOVE=1"
+    ],
+    "filament_vendor": [
+        "Geeetech"
+    ],
+    "from": "User",
+    "inherits": "Generic PLA @System",
+    "is_custom_defined": "0",
+    "name": "Geeetech PLA @A30",
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "pressure_advance": [
+        "0.85"
+    ],
+    "version": "2.3.0.3"
+}

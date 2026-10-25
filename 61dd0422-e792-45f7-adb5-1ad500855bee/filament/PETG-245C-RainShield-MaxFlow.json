@@ -1,0 +1,27 @@
+{
+	"fan_max_speed": [
+		"100"
+	],
+	"filament_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"filament_max_volumetric_speed": [
+		"30"
+	],
+	"filament_settings_id": [
+		"PETG-245C-RainShield-MaxFlow"
+	],
+	"from": "User",
+	"inherits": "GEEETECH - PETG Black modified",
+	"name": "PETG-245C-RainShield-MaxFlow",
+	"nozzle_temperature": [
+		"245"
+	],
+	"nozzle_temperature_initial_layer": [
+		"250"
+	],
+	"overhang_fan_threshold": [
+		"50%"
+	],
+	"version": "2.1.1.0"
+}

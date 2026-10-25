@@ -1,0 +1,15 @@
+{
+    "from": "User",
+    "inherits": "Tronxy X5SA 400 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Tronxy X5SA 330 0.4 nozzle",
+    "nozzle_type": "brass",
+    "printable_area": [
+        "0x0",
+        "330x0",
+        "330x330",
+        "0x330"
+    ],
+    "printer_settings_id": "Tronxy X5SA 330 0.4 nozzle",
+    "version": "2.2.0.4"
+}

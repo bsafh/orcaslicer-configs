@@ -1,0 +1,16 @@
+{
+	"from": "Bundle",
+	"inherits": "Bambu Lab A1 0.6 nozzle",
+	"name": "Bambu Lab A1 0.6 nozzle - Copy",
+	"nozzle_type": [
+		"hardened_steel"
+	],
+	"printer_extruder_id": [
+		"1"
+	],
+	"printer_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"printer_settings_id": "Bambu Lab A1 0.6 nozzle - Copy",
+	"version": "2.1.0.16"
+}

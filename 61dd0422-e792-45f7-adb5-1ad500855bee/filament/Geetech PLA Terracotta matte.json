@@ -1,0 +1,100 @@
+{
+    "default_filament_colour": [
+        "#C45824"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "fan_max_speed": [
+        "20"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_cooling_final_speed": [
+        "0"
+    ],
+    "filament_cooling_initial_speed": [
+        "0"
+    ],
+    "filament_cooling_moves": [
+        "0"
+    ],
+    "filament_cost": [
+        "16"
+    ],
+    "filament_deretraction_speed": [
+        "40"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode\nCLEAR_ACTIVE_SPOOL\nRESTORE_GCODE_STATE NAME=PLA_START\n"
+    ],
+    "filament_flow_ratio": [
+        "0.9381"
+    ],
+    "filament_loading_speed": [
+        "0"
+    ],
+    "filament_loading_speed_start": [
+        "0"
+    ],
+    "filament_max_volumetric_speed": [
+        "25"
+    ],
+    "filament_retract_before_wipe": [
+        "70%"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.5"
+    ],
+    "filament_retraction_speed": [
+        "70"
+    ],
+    "filament_settings_id": [
+        "Geetech PLA Terracotta matte"
+    ],
+    "filament_start_gcode": [
+        "; Filament gcode\n; filament start gcode\nSET_ACTIVE_SPOOL ID=17\nSAVE_GCODE_STATE NAME=PLA_START\n;SET_GCODE_OFFSET Z=0.025 MOVE=1"
+    ],
+    "filament_unloading_speed": [
+        "0"
+    ],
+    "filament_unloading_speed_start": [
+        "0"
+    ],
+    "filament_vendor": [
+        "Geeetech"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "from": "User",
+    "inherits": "Generic PLA Matte @System",
+    "is_custom_defined": "0",
+    "name": "Geetech PLA Terracotta matte",
+    "nozzle_temperature": [
+        "190"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "200"
+    ],
+    "nozzle_temperature_range_high": [
+        "220"
+    ],
+    "pressure_advance": [
+        "0.056"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
+    "version": "2.3.1.10"
+}

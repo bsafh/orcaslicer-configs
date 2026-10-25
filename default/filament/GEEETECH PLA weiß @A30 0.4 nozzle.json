@@ -1,0 +1,16 @@
+{
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "filament_settings_id": [
+        "GEEETECH PLA weiß @A30 0.4 nozzle"
+    ],
+    "from": "User",
+    "inherits": "GEEETECH PLA weiß @Geeetech A30 Pro 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "GEEETECH PLA weiß @A30 0.4 nozzle",
+    "pressure_advance": [
+        "0.85"
+    ],
+    "version": "2.1.1.0"
+}

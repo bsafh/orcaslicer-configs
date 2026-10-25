@@ -1,0 +1,14 @@
+{
+    "author": "f5599602-8dd8-42b1-a37b-d7934063a8e0",
+    "description": "Edits based of original Anycubic files.\nMy Kobra S1 is working very good with them.",
+    "filament_presets": [
+        "SUNLU PLA + @Anycubic Kobra S1 0.4 nozzle"
+    ],
+    "id": "342def1a-7f48-4edc-b8c2-823c6be20e52",
+    "imported_time": 1782200473,
+    "name": "Sunlu Filament Edits (PLA+ and ASA) based of Anycubic Profiles",
+    "print_presets": [],
+    "printer_presets": [],
+    "updated_time": 0,
+    "version": "1.00"
+}
