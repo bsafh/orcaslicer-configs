@@ -1,19 +1,21 @@
 {
-    "compatible_printers": [
-        "Geeetech A30 Pro 0.4 nozzle"
-    ],
-    "filament_deretraction_speed": [
-        "25"
-    ],
-    "filament_retraction_speed": [
-        "25"
-    ],
-    "filament_settings_id": [
-        "Generic TPU @System @ALL"
-    ],
-    "from": "User",
-    "inherits": "Generic TPU @System",
-    "is_custom_defined": "0",
-    "name": "Generic TPU @System @ALL",
-    "version": "2.3.0.3"
+	"compatible_printers": [
+		"Geeetech A30 Pro 0.4 nozzle"
+	],
+	"filament_deretraction_speed": [
+		"25"
+	],
+	"filament_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"filament_retraction_speed": [
+		"25"
+	],
+	"filament_settings_id": [
+		"Generic TPU @System @ALL"
+	],
+	"from": "User",
+	"inherits": "Generic TPU @System",
+	"name": "Generic TPU @System @ALL",
+	"version": "2.3.0.3"
 }
